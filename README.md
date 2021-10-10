@@ -22,7 +22,49 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Gem exposes a module "Offersfinder" and single class method "new_offer"
+
+new_offer accepts four optional arguments. loan_amount, property_value, repayment, and years_fixed
+
+loan_amount: Integer
+property_value: Integer
+repayment: Float
+years_fixed: Integer
+
+* Example Request
+```
+  Offersfinder.new_offer(loan_amount: 35000, property_value: 350000, repayment: 1.0, years_fixed: 15)
+```
+
+* Example Response
+```
+    {
+      offers: [
+        {
+          "institution_name": "ING_DIBA",
+          "borrowing_rate": 1.48
+        }
+      ]
+    }
+```
+
+* Example Error Response
+
+```
+  {
+    offfers: [],
+    message: "Invalid Parameters"
+  }
+```
+
+* Example Internal Parsing Error (Crucial) - Body JSON Parsing error. Shouldn't happen unless API is down.
+
+```
+  {
+    offers: [],
+    message: "Parsing Error, Contact Author"
+  }
+```
 
 ## Development
 

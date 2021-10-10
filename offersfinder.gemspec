@@ -10,11 +10,11 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Finds New Offers from Hypofriend"
   spec.description   = "Based on passed in parameters, finds best new offers consuming new-offers API."
-  spec.homepage      = "https://github.com/thezainsaleem/"
+  spec.homepage      = "https://github.com/thezainsaleem/hypofriend-offers-finder"
   spec.license       = "MIT"
   spec.required_ruby_version = "= 2.5"
 
-  spec.metadata["allowed_push_host"] = "http://mygemserver.com"
+  spec.metadata["allowed_push_host"] = "https://github.com/thezainsaleem/hypofriend-offers-finder"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "None"
